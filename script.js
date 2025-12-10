@@ -8,9 +8,9 @@ const profiles = {
         name: "John Doe",
         img: "https://randomuser.me/api/portraits/men/32.jpg"
     },
-    emma: {
-        name: "Emma Watson",
-        img: "https://randomuser.me/api/portraits/women/44.jpg"
+    keerthi: {
+        name: "Keerthi Nori",
+        img: "./images/keerthi.jpg"
     },
     mike: {
         name: "Mike Johnson",
