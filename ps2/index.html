@@ -2,54 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fancy Timetable</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Faculty Timetable</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="timetable-container">
-        <h1>My Weekly Timetable</h1>
-        <table id="timetable">
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>8:00 - 9:00</td>
-                    <td class="subject">Math</td>
-                    <td class="subject">English</td>
-                    <td class="subject">Physics</td>
-                    <td class="subject">Chemistry</td>
-                    <td class="subject">History</td>
-                </tr>
-                <tr>
-                    <td>9:00 - 10:00</td>
-                    <td class="subject">Biology</td>
-                    <td class="subject">Math</td>
-                    <td class="subject">English</td>
-                    <td class="subject">Physics</td>
-                    <td class="subject">Geography</td>
-                </tr>
-                <tr>
-                    <td>10:00 - 11:00</td>
-                    <td class="subject">Chemistry</td>
-                    <td class="subject">Computer</td>
-                    <td class="subject">Math</td>
-                    <td class="subject">English</td>
-                    <td class="subject">Physics</td>
-                </tr>
-                <!-- Add more rows as needed -->
-            </tbody>
-        </table>
-    </div>
 
-    <script src="script.js"></script>
+<div class="wrapper">
+    <div class="card">
+        <h1>Faculty Timetable</h1>
+        <p class="subtitle">Select a faculty to view their weekly schedule</p>
+
+        <select id="facultySelect" onchange="showTimetable()">
+            <option value="">Select Faculty</option>
+            <option value="XYZ">XYZ</option>
+            <option value="BP">BP</option>
+            <option value="BR">BR</option>
+            <option value="patro">Patro</option>
+            <option value="KMY">KMY</option>
+            <option value="PVNR">PVNR</option>
+            <option value="CVR">CVR</option>
+        </select>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Session</th>
+                        <th>Batch</th>
+                        <th>Course</th>
+                        <th>Room</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr class="placeholder">
+                        <td colspan="5">Please select a faculty</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
