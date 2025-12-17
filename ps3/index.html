@@ -2,30 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Course Registration</title>
+    <title>Course Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h2>Course Registration</h2>
+    <h2>Course Registration Form</h2>
 
-    <label>Student Name</label>
-    <input type="text" id="studentName" placeholder="Enter your name">
+    <form id="regForm">
+        <label>Student Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
 
-    <label>Select Course</label>
-    <select id="course">
-        <option value="">-- Choose Course --</option>
-        <option value="Data Structures">Data Structures</option>
-        <option value="Operating Systems">Operating Systems</option>
-        <option value="DBMS">DBMS</option>
-        <option value="Machine Learning">Machine Learning</option>
-    </select>
+        <label>Select Subjects</label>
 
-    <button onclick="registerCourse()">Register</button>
+        <div class="subject-list">
+            <label>
+                <input type="checkbox" class="subject" value="1000">
+                Data Structures <span>₹1000</span>
+            </label>
 
-    <h3>Registered Courses</h3>
-    <ul id="registrationList"></ul>
+            <label>
+                <input type="checkbox" class="subject" value="1200">
+                Operating Systems <span>₹1200</span>
+            </label>
+
+            <label>
+                <input type="checkbox" class="subject" value="1500">
+                DBMS <span>₹1500</span>
+            </label>
+
+            <label>
+                <input type="checkbox" class="subject" value="1800">
+                Computer Networks <span>₹1800</span>
+            </label>
+
+            <label>
+                <input type="checkbox" class="subject" value="2000">
+                Java Programming <span>₹2000</span>
+            </label>
+        </div>
+
+        <div class="total-box">
+            Total Registration Fee:
+            <span id="total">₹0</span>
+        </div>
+
+        <button type="submit">Submit Registration</button>
+    </form>
+
+    <div id="result"></div>
 </div>
 
 <script src="script.js"></script>

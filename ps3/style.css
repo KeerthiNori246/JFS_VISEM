@@ -1,47 +1,95 @@
-body {
+* {
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
+}
+
+body {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    width: 350px;
-    margin: 60px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: #fff;
+    width: 420px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-h2, h3 {
+h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
-    margin-top: 15px;
+    margin-top: 12px;
     font-weight: bold;
 }
 
-input, select {
+input[type="text"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.subject-list {
+    margin-top: 10px;
+}
+
+.subject-list label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-radius: 6px;
+    background: #f7f7f7;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.subject-list span {
+    font-size: 14px;
+    color: #555;
+}
+
+.total-box {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #eef6ff;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
 }
 
 button {
     width: 100%;
     margin-top: 20px;
-    padding: 10px;
-    background: #007bff;
+    padding: 12px;
+    background: #4CAF50;
     color: white;
+    font-size: 16px;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #45a049;
 }
 
-ul {
-    margin-top: 10px;
+#result {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #ffe6e6;
+    font-weight: bold;
+    text-align: center;
 }
