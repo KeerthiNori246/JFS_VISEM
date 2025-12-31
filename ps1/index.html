@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Selector</title>
+    <title>Person Info Display</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="container">
-    <h2>Select a Person</h2>
+<h2>Select a Person</h2>
 
-    <select id="personSelect">
-        <option value="">-- Choose a name --</option>
-        <option value="john">John Doe</option>
-        <option value="keerthi">Keerthi Nori</option>
-        <option value="mike">Mike Johnson</option>
-    </select>
+<select id="nameSelect" onchange="showDetails()">
+    <option value="">-- Select --</option>
+    <option value="guido">Guido van Rossum (Python)</option>
+    <option value="dennis">Dennis M. Ritchie (C)</option>
+    <option value="james">James Gosling (Java)</option>
+    <option value="stroustrup">Bjarne Stroustrup (C++)</option>
+</select>
 
-    <div id="profileCard" class="profile-card">
-        <img id="profileImage" src="" alt="Profile Photo">
-        <h3 id="profileName"></h3>
-    </div>
+<div id="photoBox">
+    <img id="photo" src="" alt="Photo" width="200">
+</div>
+
+<div id="infoBox">
+    <p id="infoText">Please select a person.</p>
 </div>
 
 <script src="script.js"></script>
